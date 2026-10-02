@@ -7,7 +7,7 @@ Landing page estática para **Comercializadora Mi Rincón Deco**: bolsas de basu
 
 ## Configuración
 
-1. **WhatsApp**: en `index.html`, busca `const WHATSAPP = "";` y pon el número con código de país, sin `+` ni espacios (ej. `56912345678`).
+1. **WhatsApp**: configurado en `const WHATSAPP = "56988994814";` dentro de `index.html`. Para cambiarlo, usa el número con código de país, sin `+` ni espacios (ej. `56912345678`).
 2. **Precios y productos**: están en el arreglo `P` dentro de `index.html`. Cada producto tiene `id` (= nombre de la imagen en `img/`), categoría, nombre, descripción y sus presentaciones `[nombre, precio]`.
 
 ## Publicar

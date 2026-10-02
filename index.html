@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mi Rincón Deco · Bolsas de basura y desechables al por mayor</title>
-<meta name="description" content="Comercializadora Mi Rincón Deco: bolsas de basura, bolsas camiseta, vasos, platos, cubiertos y artículos desechables en packs y cajas a precio mayorista. Cotiza por WhatsApp.">
+<title>Mi Rincón Deco · Desechables para minimarkets y negocios · RM y VI Región</title>
+<meta name="description" content="Comercializadora Mi Rincón Deco: bolsas de basura, bolsas camiseta, vasos, platos, cubiertos y artículos desechables en packs y cajas a precio mayorista para minimarkets, supermercados y negocios locales. Despacho gratis en la Región Metropolitana y VI Región, pago contra entrega.">
 <link rel="icon" href="img/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -127,6 +127,22 @@ section.block{padding:72px 0 24px}
 .band h2{margin:0 0 6px;font-size:clamp(1.4rem,3vw,2rem);letter-spacing:-.02em}
 .band p{margin:0;opacity:.75}
 
+.cov{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:start}
+.cov h2{font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-.02em;margin:10px 0 12px;line-height:1.15}
+.cov-text>p{color:var(--muted);margin:0 0 16px}
+.checks{list-style:none;padding:0;margin:0 0 22px;display:grid;gap:8px}
+.checks li{padding-left:30px;position:relative}
+.checks li::before{content:"✓";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;background:#dcf5e7;color:var(--price);font-weight:800;font-size:.75rem;display:grid;place-items:center}
+.regions{display:grid;gap:12px}
+.region{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;display:flex;gap:14px;align-items:flex-start;border-left:4px solid var(--brand)}
+.region .pin{font-size:1.4rem}
+.region h3{margin:0 0 2px;font-size:1.05rem}
+.region p{margin:0;color:var(--muted);font-size:.9rem}
+.clients{background:var(--brand-soft);border-radius:var(--radius);padding:18px}
+.clients h4{margin:0 0 10px;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--brand)}
+.cl{display:flex;flex-wrap:wrap;gap:8px}
+.cl span{background:#fff;border-radius:999px;padding:6px 12px;font-size:.86rem;font-weight:600}
+footer a{color:var(--brand);font-weight:600;text-decoration:none}
 footer{margin-top:72px;border-top:1px solid var(--line);background:#fff}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:28px;padding-bottom:28px;font-size:.88rem;color:var(--muted)}
 
@@ -162,6 +178,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
   .featured{grid-template-columns:repeat(2,1fr)}
   .featured .fcard:last-child{grid-column:span 2}
   .steps{grid-template-columns:1fr}
+  .cov{grid-template-columns:1fr}
   .nav{display:none}
   .cart-btn{margin-left:auto}
 }
@@ -189,6 +206,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
       <span>Mi Rincón Deco<small>Comercializadora · Desechables</small></span>
     </a>
     <nav class="nav">
+      <a href="#cobertura">Cobertura</a>
       <a href="#basura">Bolsas de basura</a>
       <a href="#catalogo">Catálogo</a>
       <a href="#como-comprar">Cómo comprar</a>
@@ -204,9 +222,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 <section class="hero">
   <div class="wrap">
     <div>
-      <span class="eyebrow">📦 Venta por mayor · packs y cajas</span>
-      <h1>Bolsas de basura y desechables <span>al mejor precio</span> para tu negocio</h1>
-      <p class="lead">Abastece tu almacén, restaurante, oficina o evento con bolsas de basura, bolsas camiseta, vasos, platos, cubiertos y mucho más. Arma tu pedido aquí y envíalo por WhatsApp en un clic.</p>
+      <span class="eyebrow">🚚 Despacho gratis · Región Metropolitana y VI Región</span>
+      <h1>Bolsas y desechables <span>para tu minimarket</span>, directo a tu local</h1>
+      <p class="lead">Abastecemos a minimarkets, supermercados y negocios locales con bolsas de basura, bolsas camiseta, vasos, platos, cubiertos y mucho más. Te lo llevamos <strong>gratis</strong> a tu negocio, en zonas urbanas y rurales, y <strong>pagas al recibir</strong>.</p>
       <div class="cta-row">
         <a class="btn btn-light" href="#catalogo">Ver catálogo y precios</a>
         <a class="btn btn-wa wa-link" href="#" target="_blank" rel="noopener">
@@ -216,8 +234,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
       </div>
       <div class="hero-stats">
         <div><b id="statProducts">+70</b><span>productos</span></div>
-        <div><b>Packs y cajas</b><span>precios por volumen</span></div>
-        <div><b>Pedido fácil</b><span>directo a WhatsApp</span></div>
+        <div><b>$0</b><span>despacho a tu negocio</span></div>
+        <div><b>Pago al recibir</b><span>sin pagos por adelantado</span></div>
       </div>
     </div>
     <div class="hero-grid" aria-hidden="true">
@@ -234,9 +252,42 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 <section class="benefits">
   <div class="wrap grid">
     <div class="benefit"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div><h3>Precio mayorista</h3><p>Mejor precio comprando por pack o caja.</p></div></div>
-    <div class="benefit"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><h3>Bolsas resistentes</h3><p>Basura de 18 a 45 micrones de espesor.</p></div></div>
-    <div class="benefit"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/></svg></div><div><h3>Todo en un lugar</h3><p>Bolsas, vasos, platos, cubiertos y más.</p></div></div>
-    <div class="benefit"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div><h3>Atención directa</h3><p>Cotiza y coordina tu despacho por WhatsApp.</p></div></div>
+    <div class="benefit"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="7" width="14" height="10" rx="1"/><path d="M15 10h4l3 3v4h-7"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></div><div><h3>Despacho gratis</h3><p>Llevamos tu pedido sin costo hasta tu local.</p></div></div>
+    <div class="benefit"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/></svg></div><div><h3>Pagas al recibir</h3><p>Pagas cuando el producto llega a tu negocio.</p></div></div>
+    <div class="benefit"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div><h3>Zonas urbanas y rurales</h3><p>Comunas de la RM y de la VI Región.</p></div></div>
+  </div>
+</section>
+
+<section class="block" id="cobertura">
+  <div class="wrap">
+    <div class="cov">
+      <div class="cov-text">
+        <span class="tag">Quiénes somos</span>
+        <h2>Tu proveedor de desechables en la Región Metropolitana y la VI Región</h2>
+        <p>En <strong>Mi Rincón Deco</strong> nos especializamos en bolsas y artículos desechables para el comercio. Trabajamos principalmente con <strong>negocios locales, minimarkets y supermercados</strong>, y llegamos con nuestro despacho a comunas urbanas y rurales de ambas regiones.</p>
+        <ul class="checks">
+          <li><b>Despacho gratis</b> directo a tu negocio.</li>
+          <li><b>Pago contra entrega</b>: pagas al recibir el producto.</li>
+          <li>Cobertura en <b>zonas urbanas y rurales</b>.</li>
+          <li>Precios por pack y por caja para que tengas mejor margen.</li>
+        </ul>
+        <a class="btn btn-wa wa-link" href="#" target="_blank" rel="noopener">Consultar si llegamos a mi comuna</a>
+      </div>
+      <div class="regions">
+        <div class="region">
+          <div class="pin">📍</div>
+          <div><h3>Región Metropolitana</h3><p>Santiago y comunas de la región, urbanas y rurales.</p></div>
+        </div>
+        <div class="region">
+          <div class="pin">📍</div>
+          <div><h3>VI Región de O'Higgins</h3><p>Rancagua y comunas de la región, urbanas y rurales.</p></div>
+        </div>
+        <div class="clients">
+          <h4>Trabajamos con</h4>
+          <div class="cl"><span>🏪 Minimarkets</span><span>🛒 Supermercados</span><span>🥖 Almacenes y negocios locales</span></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -274,16 +325,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 
 <section class="block" id="como-comprar">
   <div class="wrap">
-    <div class="sec-head"><div><h2>¿Cómo comprar?</h2><p>Simple y rápido, sin registrarte.</p></div></div>
+    <div class="sec-head"><div><h2>¿Cómo comprar?</h2><p>Simple y rápido, sin registrarte y sin pagar por adelantado.</p></div></div>
     <div class="steps">
       <div class="step"><div class="n">1</div><h3>Arma tu pedido</h3><p>Elige productos, presentación (pack o caja) y cantidad desde el catálogo.</p></div>
       <div class="step"><div class="n">2</div><h3>Envíalo por WhatsApp</h3><p>Con un clic se genera el mensaje con el detalle y el total estimado.</p></div>
-      <div class="step"><div class="n">3</div><h3>Confirmamos y despachamos</h3><p>Te confirmamos stock, forma de pago y coordinamos la entrega o retiro.</p></div>
+      <div class="step"><div class="n">3</div><h3>Recibe y paga</h3><p>Confirmamos stock y te lo llevamos gratis a tu negocio. Pagas al recibir el producto.</p></div>
     </div>
     <div class="band">
       <div>
-        <h2>¿Compras en volumen o necesitas otro producto?</h2>
-        <p>Escríbenos y te preparamos una cotización a la medida de tu negocio.</p>
+        <h2>¿Tienes un minimarket o supermercado?</h2>
+        <p>Escríbenos al +56 9 8899 4814 y te preparamos una cotización. Despacho gratis y pago contra entrega.</p>
       </div>
       <a class="btn btn-wa wa-link" href="#" target="_blank" rel="noopener">Hablar por WhatsApp</a>
     </div>
@@ -293,6 +344,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 <footer>
   <div class="wrap">
     <span>© <span id="year"></span> Comercializadora Mi Rincón Deco</span>
+    <span>WhatsApp <a href="https://wa.me/56988994814" target="_blank" rel="noopener">+56 9 8899 4814</a> · Región Metropolitana y VI Región</span>
     <span>Precios en pesos chilenos, sujetos a cambio y disponibilidad de stock.</span>
   </div>
 </footer>
@@ -308,13 +360,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
   <footer>
     <div class="tot"><span>Total estimado</span><span id="total">$0</span></div>
     <a class="btn btn-wa" id="sendWa" href="#" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>
-    <p class="note">El pedido se confirma por WhatsApp según stock disponible.</p>
+    <p class="note">🚚 Despacho gratis · 💵 Pagas al recibir<br>El pedido se confirma por WhatsApp según stock disponible.</p>
   </footer>
 </aside>
 
 <script>
 // ⚙️ Número de WhatsApp del proveedor, con código de país y sin "+" ni espacios (ej: "56912345678").
-const WHATSAPP = "";
+const WHATSAPP = "56988994814";
 
 const CATS = {
   basura: "Bolsas de basura",
@@ -426,7 +478,7 @@ const clp = n => "$" + n.toLocaleString("es-CL");
 const waUrl = text => "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(text);
 const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
-document.querySelectorAll(".wa-link").forEach(a => a.href = waUrl("Hola Mi Rincón Deco, quiero cotizar productos desechables."));
+document.querySelectorAll(".wa-link").forEach(a => a.href = waUrl("Hola Mi Rincón Deco, quiero cotizar productos desechables para mi negocio."));
 $("#year").textContent = new Date().getFullYear();
 $("#statProducts").textContent = "+" + Math.floor(P.length / 10) * 10;
 
@@ -528,7 +580,7 @@ function renderCart() {
   const msg = "Hola Mi Rincón Deco, quiero hacer este pedido:\n\n" +
     cart.map(l => { const p = P.find(x => x.id === l.id); const [lb, pr] = p.v[l.vi];
       return `• ${l.qty} x ${p.n} (${lb}) — ${clp(pr * l.qty)}`; }).join("\n") +
-    `\n\nTotal estimado: ${clp(total)}\n\nQuedo atento(a) a la confirmación de stock y despacho.`;
+    `\n\nTotal estimado: ${clp(total)}\n\nNombre del negocio:\nComuna:\nDirección:\n\nQuedo atento(a) a la confirmación de stock y despacho.`;
   $("#sendWa").href = cart.length ? waUrl(msg) : "#";
 }
 $("#items").addEventListener("click", e => {
