@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi Rincón Deco · Desechables para minimarkets y negocios · RM y VI Región</title>
+<meta name="description" content="Comercializadora Mi Rincón Deco: bolsas de basura, bolsas camiseta, vasos, platos, cubiertos y artículos desechables en packs y cajas a precio mayorista para minimarkets, supermercados y negocios locales. Despacho gratis en la Región Metropolitana y VI Región, pago contra entrega.">
+<link rel="icon" href="img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f8fb;--surface:#fff;--ink:#0f1b2d;--muted:#5b6b80;--line:#e3e8ef;
+  --brand:#0b6bcb;--brand-dark:#084f98;--brand-soft:#e7f1fc;
+  --price:#0f9d58;--accent:#ff7a1a;--wa:#25d366;
+  --radius:16px;--shadow:0 1px 2px rgba(15,27,45,.06),0 8px 24px rgba(15,27,45,.06);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Plus Jakarta Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+
+/* Header */
+header.top{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:16px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:-.01em}
+.brand img{width:46px;height:36px;object-fit:contain}
+.brand small{display:block;font-weight:500;font-size:.72rem;color:var(--muted);letter-spacing:.02em}
+.nav{display:flex;gap:22px;margin-left:auto}
+.nav a{text-decoration:none;font-weight:600;font-size:.94rem;color:var(--muted)}
+.nav a:hover{color:var(--brand)}
+.cart-btn{position:relative;display:flex;align-items:center;gap:8px;border:0;background:var(--brand);color:#fff;font-weight:700;padding:10px 16px;border-radius:999px}
+.cart-btn:hover{background:var(--brand-dark)}
+.cart-count{background:#fff;color:var(--brand);border-radius:999px;min-width:22px;height:22px;display:grid;place-items:center;font-size:.78rem;padding:0 6px}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#0b6bcb 0%,#0a4f95 60%,#083a6e 100%);color:#fff;overflow:hidden;position:relative}
+.hero::after{content:"";position:absolute;inset:auto -120px -160px auto;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.14),transparent 70%)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:64px;padding-bottom:72px;position:relative;z-index:1}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:6px 12px;border-radius:999px;font-size:.82rem;font-weight:600}
+.hero h1{font-size:clamp(2rem,4.6vw,3.3rem);line-height:1.08;letter-spacing:-.03em;margin:18px 0 16px}
+.hero h1 span{color:#9fe3b8}
+.hero p.lead{font-size:1.08rem;opacity:.9;max-width:34rem;margin:0 0 28px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:12px;border:0}
+.btn-light{background:#fff;color:var(--brand-dark)}
+.btn-wa{background:var(--wa);color:#08341b}
+.btn:hover{transform:translateY(-1px)}
+.hero-stats{display:flex;gap:28px;margin-top:34px;flex-wrap:wrap}
+.hero-stats b{display:block;font-size:1.6rem;letter-spacing:-.02em}
+.hero-stats span{font-size:.85rem;opacity:.8}
+.hero-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.hero-grid figure{margin:0;background:#fff;border-radius:14px;aspect-ratio:1;display:grid;place-items:center;padding:10px;box-shadow:0 12px 30px rgba(0,0,0,.18)}
+.hero-grid figure:nth-child(2),.hero-grid figure:nth-child(5){transform:translateY(18px)}
+.hero-grid img{max-height:100%;object-fit:contain;border-radius:8px}
+
+/* Benefits */
+.benefits{margin-top:-34px;position:relative;z-index:2}
+.benefits .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.benefit{background:var(--surface);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:flex-start}
+.benefit .ic{flex:none;width:40px;height:40px;border-radius:10px;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center}
+.benefit h3{margin:0 0 2px;font-size:.98rem}
+.benefit p{margin:0;font-size:.86rem;color:var(--muted)}
+
+/* Section titles */
+section.block{padding:72px 0 24px}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.sec-head h2{font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-.02em;margin:0}
+.sec-head p{margin:4px 0 0;color:var(--muted)}
+
+/* Featured trash bags */
+.featured{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.fcard{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px;display:flex;flex-direction:column;border:2px solid transparent}
+.fcard:hover{border-color:var(--brand-soft)}
+.fcard .ph{aspect-ratio:1;display:grid;place-items:center;background:#fafbfc;border-radius:12px;margin-bottom:10px}
+.fcard .ph img{max-height:92%;object-fit:contain}
+.fcard h3{margin:0;font-size:1rem}
+.fcard .specs{font-size:.8rem;color:var(--muted);margin:4px 0 8px}
+.fcard .from{margin-top:auto;font-size:.78rem;color:var(--muted)}
+.fcard .from b{display:block;font-size:1.3rem;color:var(--price);letter-spacing:-.01em}
+
+/* Catalog controls */
+.controls{position:sticky;top:68px;z-index:20;background:var(--bg);padding:12px 0;display:flex;flex-direction:column;gap:12px}
+.search{position:relative}
+.search input{width:100%;padding:13px 14px 13px 44px;border:1px solid var(--line);border-radius:12px;font:inherit;background:#fff;outline:none}
+.search input:focus{border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft)}
+.search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:#fff;color:var(--ink);padding:8px 14px;border-radius:999px;font-weight:600;font-size:.88rem}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+/* Product grid */
+.grid-products{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin-top:8px}
+.card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);display:flex;flex-direction:column;overflow:hidden}
+.card .ph{aspect-ratio:4/3;background:#fafbfc;display:grid;place-items:center;padding:12px;border-bottom:1px solid var(--line)}
+.card .ph img{max-height:100%;object-fit:contain;border-radius:6px}
+.card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.tag{align-self:flex-start;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--brand);background:var(--brand-soft);padding:3px 8px;border-radius:6px}
+.card h3{margin:0;font-size:1.04rem;line-height:1.25}
+.card .desc{margin:0;font-size:.84rem;color:var(--muted)}
+.card select{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:10px;font:inherit;font-size:.88rem;background:#fff}
+.price{font-size:1.45rem;font-weight:800;color:var(--price);letter-spacing:-.02em}
+.buy{display:flex;gap:8px;margin-top:auto;align-items:center}
+.qty{display:flex;align-items:center;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.qty button{border:0;background:#fff;width:32px;height:38px;font-size:1.1rem;color:var(--muted)}
+.qty input{width:36px;border:0;text-align:center;font:inherit;font-weight:700;-moz-appearance:textfield}
+.qty input::-webkit-outer-spin-button,.qty input::-webkit-inner-spin-button{-webkit-appearance:none}
+.add{flex:1;border:0;background:var(--brand);color:#fff;font-weight:700;border-radius:10px;height:40px}
+.add:hover{background:var(--brand-dark)}
+.add.ok{background:var(--price)}
+.empty{text-align:center;color:var(--muted);padding:40px 0;display:none}
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step{background:var(--surface);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+.step .n{width:38px;height:38px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;display:grid;place-items:center;margin-bottom:12px}
+.step h3{margin:0 0 6px}
+.step p{margin:0;color:var(--muted);font-size:.92rem}
+
+/* CTA band */
+.band{margin:72px 0 0;background:var(--ink);color:#fff;border-radius:24px;padding:40px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.band h2{margin:0 0 6px;font-size:clamp(1.4rem,3vw,2rem);letter-spacing:-.02em}
+.band p{margin:0;opacity:.75}
+
+.cov{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:start}
+.cov h2{font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-.02em;margin:10px 0 12px;line-height:1.15}
+.cov-text>p{color:var(--muted);margin:0 0 16px}
+.checks{list-style:none;padding:0;margin:0 0 22px;display:grid;gap:8px}
+.checks li{padding-left:30px;position:relative}
+.checks li::before{content:"✓";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;background:#dcf5e7;color:var(--price);font-weight:800;font-size:.75rem;display:grid;place-items:center}
+.regions{display:grid;gap:12px}
+.region{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;display:flex;gap:14px;align-items:flex-start;border-left:4px solid var(--brand)}
+.region .pin{font-size:1.4rem}
+.region h3{margin:0 0 2px;font-size:1.05rem}
+.region p{margin:0;color:var(--muted);font-size:.9rem}
+.clients{background:var(--brand-soft);border-radius:var(--radius);padding:18px}
+.clients h4{margin:0 0 10px;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--brand)}
+.cl{display:flex;flex-wrap:wrap;gap:8px}
+.cl span{background:#fff;border-radius:999px;padding:6px 12px;font-size:.86rem;font-weight:600}
+.comunas{margin-top:28px;background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}
+.com-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.com-head h3{margin:0;font-size:1.25rem;letter-spacing:-.01em}
+.com-head p{margin:2px 0 0;color:var(--muted);font-size:.9rem}
+.tabs{display:flex;gap:4px;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:4px}
+.tab{border:0;background:none;padding:9px 14px;border-radius:9px;font-weight:700;font-size:.9rem;color:var(--muted);display:flex;gap:8px;align-items:center}
+.tab span{font-size:.75rem;background:var(--line);color:var(--muted);border-radius:999px;padding:1px 8px}
+.tab[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(15,27,45,.12)}
+.tab[aria-selected="true"] span{background:var(--brand-soft);color:var(--brand)}
+.tab:focus-visible,.prov-btn:focus-visible,.cchip:focus-visible,.map-tools button:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.cov-body{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px;margin-top:20px;align-items:start}
+.map-box{position:relative;background:linear-gradient(180deg,#f3f7fc,#eef3f9);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.map-box svg{display:block;width:100%;height:auto;max-height:560px;touch-action:manipulation}
+.map-box path{stroke:#fff;stroke-width:.8;cursor:pointer;transition:fill .15s,opacity .15s;vector-effect:non-scaling-stroke}
+.map-box path:hover{opacity:.8}
+.map-box path.sel{stroke:var(--ink);stroke-width:2.2}
+.map-box svg.focus path:not(.on){opacity:.25}
+.map-box path.hit{stroke:var(--ink);stroke-width:1.6}
+.map-tip{position:absolute;pointer-events:none;background:var(--ink);color:#fff;font-size:.8rem;font-weight:600;padding:6px 10px;border-radius:8px;transform:translate(-50%,calc(-100% - 10px));white-space:nowrap;opacity:0;transition:opacity .1s}
+.map-tip small{display:block;font-weight:500;opacity:.7;font-size:.72rem}
+.map-tools{position:absolute;top:10px;right:10px;display:flex;gap:6px}
+.map-tools button{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:6px 10px;font-weight:700;font-size:.8rem;color:var(--ink);box-shadow:0 1px 3px rgba(15,27,45,.1)}
+.map-tools button[hidden]{display:none}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;padding:10px 14px;border-top:1px solid var(--line);background:var(--surface);font-size:.8rem;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.side{display:flex;flex-direction:column;gap:14px;min-width:0}
+.pick{border-radius:14px;padding:16px;background:var(--bg);border:1px dashed var(--line)}
+.pick.ok{background:#e9f8ef;border:1px solid #b5e5c8}
+.pick.no{background:#fff6ec;border:1px solid #f6d3ad}
+.pick h4{margin:0 0 2px;font-size:1.05rem}
+.pick p{margin:0;color:var(--muted);font-size:.86rem}
+.pick .btn{margin-top:12px;padding:10px 16px;font-size:.9rem}
+.provlist{display:flex;flex-direction:column;gap:8px;max-height:420px;overflow:auto;padding-right:4px}
+.prov{flex:none;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)}
+.prov-btn{width:100%;display:flex;align-items:center;gap:10px;border:0;background:none;padding:11px 14px;font-weight:700;font-size:.92rem;text-align:left;color:var(--ink)}
+.prov-btn i{width:12px;height:12px;border-radius:4px;flex:none}
+.prov-btn span{margin-left:auto;font-size:.75rem;color:var(--muted);font-weight:600}
+.prov-btn::after{content:"";width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);transition:transform .2s;margin-left:4px;margin-top:-4px}
+.prov.open .prov-btn::after{transform:rotate(-135deg);margin-top:4px}
+.prov ul{list-style:none;margin:0;padding:0 14px 14px;display:none;flex-wrap:wrap;gap:6px}
+.prov.open ul{display:flex}
+.cchip{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:5px 11px;font-size:.84rem;color:var(--ink)}
+.cchip small{color:var(--muted)}
+.cchip:hover{border-color:var(--brand)}
+.cchip.hit{background:#dcf5e7;border-color:#9fdcb9;font-weight:700}
+.cchip.sel{background:var(--ink);border-color:var(--ink);color:#fff}
+.cchip.sel small{color:#cfd6e0}
+@media (prefers-reduced-motion:reduce){.map-box path,.prov-btn::after,.map-tip{transition:none}}
+footer a{color:var(--brand);font-weight:600;text-decoration:none}
+footer{margin-top:72px;border-top:1px solid var(--line);background:#fff}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:28px;padding-bottom:28px;font-size:.88rem;color:var(--muted)}
+
+/* Cart drawer */
+.overlay{position:fixed;inset:0;background:rgba(15,27,45,.45);opacity:0;pointer-events:none;transition:.2s;z-index:60}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:#fff;z-index:70;transform:translateX(100%);transition:transform .25s ease;display:flex;flex-direction:column}
+.open .overlay{opacity:1;pointer-events:auto}
+.open .drawer{transform:none}
+.drawer header{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line)}
+.drawer header h2{margin:0;font-size:1.2rem}
+.x{border:0;background:var(--bg);width:36px;height:36px;border-radius:50%;font-size:1.2rem}
+.items{flex:1;overflow:auto;padding:8px 20px}
+.item{display:grid;grid-template-columns:56px 1fr auto;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);align-items:center}
+.item img{width:56px;height:56px;object-fit:contain;background:#fafbfc;border-radius:8px}
+.item h4{margin:0;font-size:.9rem;line-height:1.25}
+.item small{color:var(--muted);display:block}
+.item .r{text-align:right}
+.item .r b{display:block;color:var(--price)}
+.item .rm{border:0;background:none;color:#c0392b;font-size:.78rem;padding:0}
+.drawer footer{margin:0;padding:16px 20px;border-top:1px solid var(--line);background:#fff}
+.drawer footer .tot{display:flex;justify-content:space-between;font-weight:800;font-size:1.15rem;margin-bottom:12px}
+.drawer footer .tot span:last-child{color:var(--price)}
+.drawer footer .btn{width:100%;justify-content:center}
+.note{font-size:.76rem;color:var(--muted);margin:10px 0 0;text-align:center}
+.cart-empty{color:var(--muted);text-align:center;padding:48px 0}
+
+.fab{position:fixed;right:18px;bottom:18px;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 24px rgba(37,211,102,.4);z-index:50}
+
+@media (max-width:960px){
+  .hero .wrap{grid-template-columns:1fr;padding-top:44px}
+  .hero-grid{max-width:420px}
+  .benefits .grid{grid-template-columns:repeat(2,1fr)}
+  .featured{grid-template-columns:repeat(2,1fr)}
+  .featured .fcard:last-child{grid-column:span 2}
+  .steps{grid-template-columns:1fr}
+  .cov{grid-template-columns:1fr}
+  .cov-body{grid-template-columns:1fr}
+  .provlist{max-height:none}
+  .nav{display:none}
+  .cart-btn{margin-left:auto}
+}
+@media (max-width:520px){
+  .benefits .grid{grid-template-columns:1fr}
+  .brand small{display:none}
+  .cart-btn .lbl{display:none}
+  .band{padding:28px 22px}
+  .grid-products{grid-template-columns:1fr 1fr;gap:10px}
+  .card .body{padding:10px}
+  .card h3{font-size:.92rem}
+  .card .desc{display:none}
+  .price{font-size:1.15rem}
+  .buy{flex-direction:column;align-items:stretch}
+  .qty{justify-content:space-between}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">
+      <img src="img/logo.jpg" alt="Mi Rincón Deco">
+      <span>Mi Rincón Deco<small>Comercializadora · Desechables</small></span>
+    </a>
+    <nav class="nav">
+      <a href="#cobertura">Cobertura</a>
+      <a href="#basura">Bolsas de basura</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#como-comprar">Cómo comprar</a>
+    </nav>
+    <button class="cart-btn" id="openCart" aria-label="Ver cotización">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span class="lbl">Mi pedido</span>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">🚚 Despacho gratis · Región Metropolitana y VI Región</span>
+      <h1>Bolsas y desechables <span>para tu minimarket</span>, directo a tu local</h1>
+      <p class="lead">Abastecemos a minimarkets, supermercados y negocios locales con bolsas de basura, bolsas camiseta, vasos, platos, cubiertos y mucho más. Te lo llevamos <strong>gratis</strong> a tu negocio, en zonas urbanas y rurales, y <strong>pagas al recibir</strong>.</p>
+      <div class="cta-row">
+        <a class="btn btn-light" href="#catalogo">Ver catálogo y precios</a>
+        <a class="btn btn-wa wa-link" href="#" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4.9 2.9.8 3.4.7.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
+          Cotizar por WhatsApp
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div><b id="statProducts">+70</b><span>productos</span></div>
+        <div><b>$0</b><span>despacho a tu negocio</span></div>
+        <div><b>Pago al recibir</b><span>sin pagos por adelantado</span></div>
+      </div>
+    </div>
+    <div class="hero-grid" aria-hidden="true">
+      <figure><img src="img/basura-grande.jpg" alt=""></figure>
+      <figure><img src="img/camiseta-negra.jpg" alt=""></figure>
+      <figure><img src="img/basura-gigante.jpg" alt=""></figure>
+      <figure><img src="img/vaso-pequeno.jpg" alt=""></figure>
+      <figure><img src="img/plato-plastico.jpg" alt=""></figure>
+      <figure><img src="img/polipapel-doble.jpg" alt=""></figure>
+    </div>
+  </div>
+</section>
+
+<section class="benefits">
+  <div class="wrap grid">
+    <div class="benefit"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div><h3>Precio mayorista</h3><p>Mejor precio comprando por pack o caja.</p></div></div>
+    <div class="benefit"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="7" width="14" height="10" rx="1"/><path d="M15 10h4l3 3v4h-7"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></div><div><h3>Despacho gratis</h3><p>Llevamos tu pedido sin costo hasta tu local.</p></div></div>
+    <div class="benefit"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/></svg></div><div><h3>Pagas al recibir</h3><p>Pagas cuando el producto llega a tu negocio.</p></div></div>
+    <div class="benefit"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div><h3>Zonas urbanas y rurales</h3><p>Comunas de la RM y de la VI Región.</p></div></div>
+  </div>
+</section>
+
+<section class="block" id="cobertura">
+  <div class="wrap">
+    <div class="cov">
+      <div class="cov-text">
+        <span class="tag">Quiénes somos</span>
+        <h2>Tu proveedor de desechables en la Región Metropolitana y la VI Región</h2>
+        <p>En <strong>Mi Rincón Deco</strong> nos especializamos en bolsas y artículos desechables para el comercio. Trabajamos principalmente con <strong>negocios locales, minimarkets y supermercados</strong>, y llegamos con nuestro despacho a comunas urbanas y rurales de ambas regiones.</p>
+        <ul class="checks">
+          <li><b>Despacho gratis</b> directo a tu negocio.</li>
+          <li><b>Pago contra entrega</b>: pagas al recibir el producto.</li>
+          <li>Cobertura en <b>zonas urbanas y rurales</b>.</li>
+          <li>Precios por pack y por caja para que tengas mejor margen.</li>
+        </ul>
+        <a class="btn btn-wa wa-link" href="#" target="_blank" rel="noopener">Consultar si llegamos a mi comuna</a>
+      </div>
+      <div class="regions">
+        <div class="region">
+          <div class="pin">📍</div>
+          <div><h3>Región Metropolitana</h3><p>52 comunas de las provincias de Santiago, Cordillera, Chacabuco, Maipo, Talagante y Melipilla. <a href="#comunas" data-reg="rm">Ver comunas</a></p></div>
+        </div>
+        <div class="region">
+          <div class="pin">📍</div>
+          <div><h3>VI Región de O'Higgins</h3><p>33 comunas de las provincias de Cachapoal, Colchagua y Cardenal Caro. <a href="#comunas" data-reg="vi">Ver comunas</a></p></div>
+        </div>
+        <div class="clients">
+          <h4>Trabajamos con</h4>
+          <div class="cl"><span>🏪 Minimarkets</span><span>🛒 Supermercados</span><span>🥖 Almacenes y negocios locales</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="comunas" id="comunas">
+      <div class="com-head">
+        <div>
+          <h3>Comunas con despacho gratis</h3>
+          <p>85 comunas en zonas urbanas y rurales. Toca tu comuna en el mapa o búscala en la lista.</p>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Región">
+          <button class="tab" role="tab" id="tab-rm" data-reg="rm" aria-selected="true">Región Metropolitana <span>52</span></button>
+          <button class="tab" role="tab" id="tab-vi" data-reg="vi" aria-selected="false">VI Región <span>33</span></button>
+        </div>
+      </div>
+      <div class="cov-body">
+        <div class="map-box">
+          <div class="map-tools">
+            <button type="button" id="zoomIn">🔍 Ver Gran Santiago</button>
+            <button type="button" id="zoomOut" hidden>← Ver toda la región</button>
+          </div>
+          <svg id="map" role="img" aria-label="Mapa de comunas con despacho"></svg>
+          <div class="map-tip" id="tip"></div>
+          <div class="legend" id="legend"></div>
+        </div>
+        <div class="side">
+          <label class="search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <input id="qc" type="search" placeholder="Busca tu comuna…" aria-label="Buscar comuna" autocomplete="off">
+          </label>
+          <div class="pick" id="pick" aria-live="polite">
+            <h4>¿Llegamos a tu negocio?</h4>
+            <p>Selecciona tu comuna en el mapa o en la lista para confirmar el despacho gratis.</p>
+          </div>
+          <div class="provlist" id="provlist"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="basura">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Bolsas de basura</h2>
+        <p>Rollos de 10 unidades. Elige el tamaño según tu basurero.</p>
+      </div>
+    </div>
+    <div class="featured" id="featured"></div>
+  </div>
+</section>
+
+<section class="block" id="catalogo">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Catálogo y precios</h2>
+        <p>Elige la presentación, la cantidad y agrégalo a tu pedido.</p>
+      </div>
+    </div>
+    <div class="controls">
+      <label class="search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="q" type="search" placeholder="Buscar: bolsa basura, vaso, plato, kraft…" aria-label="Buscar productos">
+      </label>
+      <div class="chips" id="chips"></div>
+    </div>
+    <div class="grid-products" id="grid"></div>
+    <p class="empty" id="empty">No encontramos productos con esa búsqueda.</p>
+  </div>
+</section>
+
+<section class="block" id="como-comprar">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>¿Cómo comprar?</h2><p>Simple y rápido, sin registrarte y sin pagar por adelantado.</p></div></div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Arma tu pedido</h3><p>Elige productos, presentación (pack o caja) y cantidad desde el catálogo.</p></div>
+      <div class="step"><div class="n">2</div><h3>Envíalo por WhatsApp</h3><p>Con un clic se genera el mensaje con el detalle y el total estimado.</p></div>
+      <div class="step"><div class="n">3</div><h3>Recibe y paga</h3><p>Confirmamos stock y te lo llevamos gratis a tu negocio. Pagas al recibir el producto.</p></div>
+    </div>
+    <div class="band">
+      <div>
+        <h2>¿Tienes un minimarket o supermercado?</h2>
+        <p>Escríbenos al +56 9 8899 4814 y te preparamos una cotización. Despacho gratis y pago contra entrega.</p>
+      </div>
+      <a class="btn btn-wa wa-link" href="#" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> Comercializadora Mi Rincón Deco</span>
+    <span>WhatsApp <a href="https://wa.me/56988994814" target="_blank" rel="noopener">+56 9 8899 4814</a> · Región Metropolitana y VI Región</span>
+    <span>Precios en pesos chilenos, sujetos a cambio y disponibilidad de stock.</span>
+  </div>
+</footer>
+
+<a class="fab wa-link" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4.9 2.9.8 3.4.7.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
+</a>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" aria-label="Tu pedido">
+  <header><h2>Tu pedido</h2><button class="x" id="closeCart" aria-label="Cerrar">×</button></header>
+  <div class="items" id="items"></div>
+  <footer>
+    <div class="tot"><span>Total estimado</span><span id="total">$0</span></div>
+    <a class="btn btn-wa" id="sendWa" href="#" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>
+    <p class="note">🚚 Despacho gratis · 💵 Pagas al recibir<br>El pedido se confirma por WhatsApp según stock disponible.</p>
+  </footer>
+</aside>
+
+<script src="js/mapa-comunas.js"></script>
+<script>
+// ⚙️ Número de WhatsApp del proveedor, con código de país y sin "+" ni espacios (ej: "56912345678").
+const WHATSAPP = "56988994814";
+
+const CATS = {
+  basura: "Bolsas de basura",
+  plasticas: "Bolsas plásticas",
+  papel: "Bolsas de papel",
+  vasos: "Vasos y tapas",
+  mesa: "Platos y cubiertos",
+  cocina: "Cocina y envases",
+  fiesta: "Fiestas y regalos",
+  otros: "Aseo y otros"
+};
+
+// [label, precio]
+const P = [
+  // Bolsas de basura
+  {id:"basura-pequena",cat:"basura",n:"Bolsa basura pequeña",d:"50 x 70 cm · 18 micrones · rollo de 10 unidades",v:[["Pack 10 rollos",4670],["Caja 75 rollos",33826]]},
+  {id:"basura-mediana",cat:"basura",n:"Bolsa basura mediana",d:"70 x 90 cm · 22 micrones · rollo de 10 unidades",v:[["Pack 10 rollos",8514],["Caja 50 rollos",41591]]},
+  {id:"basura-grande",cat:"basura",n:"Bolsa basura grande",d:"80 x 110 cm · 30 micrones · rollo de 10 unidades",v:[["Pack 10 rollos",12614],["Caja 40 rollos",44839]]},
+  {id:"basura-gigante",cat:"basura",n:"Bolsa basura gigante",d:"90 x 120 cm · 35 micrones · rollo de 10 unidades",v:[["Pack 10 rollos",26490],["Caja 30 rollos",74185]]},
+  {id:"basura-trabajo-pesado",cat:"basura",n:"Bolsa basura trabajo pesado",d:"105 x 150 cm · 45 micrones · rollo de 10 unidades",v:[["Pack 5 rollos",18921],["Caja 15 rollos",54675]]},
+
+  // Bolsas plásticas
+  {id:"camiseta-pequena",cat:"plasticas",n:"Bolsa camiseta pequeña blanca",d:"28 x 35 cm",v:[["Pack 1.000 u",7378],["Caja 10.000 u",73780]]},
+  {id:"camiseta-mediana",cat:"plasticas",n:"Bolsa camiseta mediana blanca",d:"32 x 40 cm",v:[["Pack 1.000 u",9520],["Caja 10.000 u",95200]]},
+  {id:"camiseta-grande",cat:"plasticas",n:"Bolsa camiseta grande blanca",d:"40 x 50 cm",v:[["Pack 1.000 u",16660],["Caja 5.000 u",83300]]},
+  {id:"camiseta-extragrande",cat:"plasticas",n:"Bolsa camiseta extragrande blanca",d:"50 x 60 cm",v:[["Pack 1.000 u",27370],["Caja 3.000 u",82110]]},
+  {id:"camiseta-gigante",cat:"plasticas",n:"Bolsa camiseta gigante blanca",d:"60 x 70 cm",v:[["Pack 500 u",22253],["Caja 1.500 u",66759]]},
+  {id:"camiseta-negra",cat:"plasticas",n:"Bolsa camiseta negra gruesa",d:"40 x 50 cm",v:[["Pack 1.000 u",27370],["Caja 3.000 u",82110]]},
+  {id:"taco-pequeno",cat:"plasticas",n:"Bolsa taco pequeña",d:"20 x 30 cm",v:[["Pack 1.000 u",5712],["Caja 10.000 u",57120]]},
+  {id:"taco-grande",cat:"plasticas",n:"Bolsa taco grande",d:"30 x 40 cm",v:[["Pack 1.000 u",9758],["Caja 5.000 u",48790]]},
+  {id:"rollo-continuo-35",cat:"plasticas",n:"Rollo continuo 35 x 50",d:"Bolsas prepicadas · 35 x 50 cm",v:[["Caja 4 rollos",26180]]},
+  {id:"rollo-continuo-40",cat:"plasticas",n:"Rollo continuo 40 x 60",d:"Bolsas prepicadas · 40 x 60 cm",v:[["Caja 4 rollos",36000]]},
+  {id:"rollo-prepicado",cat:"plasticas",n:"Rollo prepicado 4 kilos",d:"Para envasar carne, verduras y alimentos",v:[["Rollo 20x30 (4 kg)",21420],["Rollo 30x40 (4 kg)",21420],["Rollo 35x50 (4 kg)",21420],["Rollo 40x60 (4 kg)",21420]]},
+  {id:"bolsa-zipper",cat:"plasticas",n:"Bolsa zipper",d:"Pack 100 unidades",v:[["18 x 20 cm",3800],["20 x 25 cm",6900],["22 x 28 cm",8330],["27 x 28 cm",9760]]},
+
+  // Bolsas de papel
+  {id:"kraft-1",cat:"papel",n:"Bolsa papel kraft 1 kilo",d:"Pack de 1.000 unidades",v:[["Pack 1.000 u",21900]]},
+  {id:"kraft-2",cat:"papel",n:"Bolsa papel kraft 2 kilos",d:"30 x 16 cm · pack de 1.000 unidades",v:[["Pack 1.000 u",23000]]},
+  {id:"kraft-3",cat:"papel",n:"Bolsa papel kraft 3 kilos",d:"35 x 16 cm · pack de 1.000 unidades",v:[["Pack 1.000 u",29000]]},
+  {id:"kraft-5",cat:"papel",n:"Bolsa papel kraft 5 kilos",d:"40 x 19 cm · pack de 1.000 unidades",v:[["Pack 1.000 u",47600]]},
+  {id:"kraft-7",cat:"papel",n:"Bolsa papel kraft 7 kilos",d:"45 x 27 cm · pack de 1.000 unidades",v:[["Pack 1.000 u",62240]]},
+  {id:"bolsa-manilla",cat:"papel",n:"Bolsa papel con manilla",d:"Pack de 50 bolsas",v:[["Mini 14x20x8 cm",9000],["Chica 22x30x10 cm",14280],["Mediana 30x41x12 cm",17400],["Grande 45x48x15 cm",19200],["Botella 14x40x8 cm",12500]]},
+  {id:"bolsa-carbon",cat:"papel",n:"Bolsa para carbón",d:"Saco de papel kraft resistente para 2,5 kilos",v:[["Pack 50 u",18800]]},
+  {id:"bolsa-reutilizable",cat:"papel",n:"Bolsa reutilizable",d:"Tela no tejida · pack de 100 bolsas",v:[["Grande 44x60 cm",20230],["Mediana 35x50 cm",16660],["Chica 30x45 cm",14280]]},
+
+  // Vasos y tapas
+  {id:"vaso-pequeno",cat:"vasos",n:"Vaso plástico pequeño",d:"300 cc / 10 oz · pack de 100",v:[["Pack 100 u",3808]]},
+  {id:"vaso-mediano",cat:"vasos",n:"Vaso plástico mediano",d:"350 cc / 12 oz · pack de 100",v:[["Pack 100 u",4641]]},
+  {id:"vaso-grande",cat:"vasos",n:"Vaso plástico grande",d:"500 cc / 16 oz · pack de 100",v:[["Pack 100 u",7800]]},
+  {id:"vaso-super-grande",cat:"vasos",n:"Vaso plástico súper grande",d:"650 cc / 22 oz · pack de 100",v:[["Pack 100 u",8900]]},
+  {id:"vaso-gigante-tapa",cat:"vasos",n:"Vaso gigante con tapa",d:"1000 cc / 34 oz · pack de 50",v:[["Pack 50 u",9950]]},
+  {id:"polipapel-doble",cat:"vasos",n:"Vaso polipapel doble capa",d:"Kraft, ideal para bebidas calientes · pack de 100",v:[["Pequeño 240cc / 8oz",8211],["Mediano 350cc / 12oz",11662],["Grande 500cc / 16oz",12614]]},
+  {id:"polipapel-una",cat:"vasos",n:"Vaso polipapel una capa",d:"Blanco · pack de 100",v:[["Pequeño 240cc / 8oz",5000],["Mediano 350cc / 12oz",7300]]},
+  {id:"tapa-polipapel",cat:"vasos",n:"Tapa vaso polipapel",d:"Para vaso 350 cc / 12 oz · pack de 100",v:[["Pack 100 u",2380]]},
+  {id:"vaso-termico",cat:"vasos",n:"Vaso térmico",d:"Plumavit · pack de 100",v:[["Pequeño 240cc / 8oz",5117],["Mediano 300cc / 10oz",6783],["Grande 350cc / 12oz",7616]]},
+  {id:"tapa-termico",cat:"vasos",n:"Tapa vaso térmico",d:"Para vaso 300 cc / 10 oz · pack de 100",v:[["Pack 100 u",4000]]},
+
+  // Platos y cubiertos
+  {id:"plato-plastico",cat:"mesa",n:"Plato plástico",d:"Pack de 100 unidades",v:[["Chico 18 cm",6000],["Mediano 22 cm",10000],["Grande 26 cm",18600]]},
+  {id:"plato-carton",cat:"mesa",n:"Plato de cartón",d:"Pack de 100 unidades",v:[["Chico N°1",2900],["Mediano N°2",3300],["Grande N°3",5855]]},
+  {id:"cuchara",cat:"mesa",n:"Cuchara sopera plástica",d:"Pack de 100 unidades",v:[["Pack 100 u",2900]]},
+  {id:"tenedor",cat:"mesa",n:"Tenedor plástico",d:"Pack de 100 unidades",v:[["Pack 100 u",2900]]},
+  {id:"cuchillo",cat:"mesa",n:"Cuchillo plástico",d:"Pack de 100 unidades",v:[["Pack 100 u",2900]]},
+  {id:"set-cubiertos",cat:"mesa",n:"Set de cubiertos",d:"Cuchara, tenedor y cuchillo · pack de 50",v:[["Pack 50 u",6200]]},
+  {id:"revolvedor",cat:"mesa",n:"Revolvedor de madera",d:"Pack de 100 unidades",v:[["Pack 100 u",595]]},
+  {id:"bombillas",cat:"mesa",n:"Bombillas plásticas flexibles",d:"10 bolsas de 100 u · colores surtidos o transparente",v:[["Pack 10 bolsas",9000]]},
+  {id:"mondadientes",cat:"mesa",n:"Mondadientes de madera",d:"12 frascos de 100 unidades",v:[["Pack 12 frascos",4760]]},
+
+  // Cocina y envases
+  {id:"pote-visagra",cat:"cocina",n:"Pote tapa bisagra",d:"450 cc · pack de 50",v:[["Pack 50 u",5950]]},
+  {id:"film",cat:"cocina",n:"Film plástico adherente",d:"10 rollos de 20 metros",v:[["Pack 10 u",9800]]},
+  {id:"aluminio",cat:"cocina",n:"Papel de aluminio",d:"10 rollos de 7,5 metros",v:[["Pack 10 u",11200]]},
+  {id:"guante",cat:"cocina",n:"Guante desechable",d:"10 cajas de 100 unidades",v:[["Pack 10 cajas",9500]]},
+  {id:"brochetas",cat:"cocina",n:"Palitos de brocheta",d:"Bambú",v:[["Chica 1000 u x 15 cm",5250],["Mediana 900 u x 30 cm",6500],["Grande 500 u x 40 cm",6500]]},
+  {id:"brochetas-gruesas",cat:"cocina",n:"Brochetas gruesas",d:"Pack de 10 paquetes",v:[["Chica 30 cm",5250],["Mediana 40 cm",6500],["Grande 45 cm",7500]]},
+  {id:"caja-torta",cat:"cocina",n:"Caja para torta",d:"Con manilla · pack de 5",v:[["Chica",4000],["Mediana",5000],["Grande",6000]]},
+  {id:"caja-tartaleta",cat:"cocina",n:"Caja para tartaleta",d:"Con manilla · pack de 5",v:[["Pack 5 u",8000]]},
+  {id:"bandeja-carton",cat:"cocina",n:"Bandeja de cartón redonda",d:"Pack de 100 unidades",v:[["N°6",14280],["N°8",22491],["N°10",51051]]},
+  {id:"blonda",cat:"cocina",n:"Blonda para bandeja redonda",d:"Pack de 100 unidades",v:[["N°18 (bandeja N°6)",4522],["N°24 (bandeja N°8)",11543],["N°26 (bandeja N°10)",14268]]},
+  {id:"rollo-kraft",cat:"cocina",n:"Rollo papel kraft",d:"Para envolver y embalar",v:[["Chico 20 cm",7000],["Mediano 40 cm",14000],["Grande 59 cm",21000]]},
+  {id:"termico-57",cat:"cocina",n:"Rollo papel térmico 57 mm",d:"Para máquinas Redcompra · 17 m de largo",v:[["Pack 10 rollos",5000],["Caja 100 rollos",47600]]},
+  {id:"termico-80",cat:"cocina",n:"Rollo papel térmico 80 mm",d:"Papel ecológico · 80 m de largo",v:[["Caja 50 rollos",49980]]},
+
+  // Fiestas y regalos
+  {id:"regalo-pequena",cat:"fiesta",n:"Bolsa de regalo pequeña",d:"24x18x8 · diseño 3D y escarcha · pack de 12",v:[["Pack 12 u",5568]]},
+  {id:"regalo-mediana",cat:"fiesta",n:"Bolsa de regalo mediana",d:"32x26x10 · diseño 3D y escarcha · pack de 12",v:[["Pack 12 u",7848]]},
+  {id:"regalo-grande",cat:"fiesta",n:"Bolsa de regalo grande",d:"40x30x12 · diseño 3D y escarcha · pack de 12",v:[["Pack 12 u",9060]]},
+  {id:"regalo-botella",cat:"fiesta",n:"Bolsa de regalo botella",d:"36x13x8 · pack de 12",v:[["Pack 12 u",11424]]},
+  {id:"bolsa-navidad",cat:"fiesta",n:"Bolsa de Navidad",d:"Diseño 3D y escarcha · pack de 10",v:[["Mini 17x12x5",3570],["Pequeña 24x18x8",4640],["Mediana 32x26x10",6540],["Grande 40x30x12",7550],["Gigante 56x40x13",15000]]},
+  {id:"bolsa-navidad-botella",cat:"fiesta",n:"Bolsa de Navidad botella",d:"36x13x8 · pack de 10",v:[["Pack 10 u",9500]]},
+  {id:"papel-navidad",cat:"fiesta",n:"Papel de regalo Navidad",d:"100 pliegos, diseños surtidos",v:[["Pack 100 u",22000]]},
+  {id:"velas-numeros",cat:"fiesta",n:"Velas de cumpleaños números",d:"Pack de 12: números del 0 al 9 y dos signos ?",v:[["Pack 12 u",6480]]},
+  {id:"velas-diseno",cat:"fiesta",n:"Velas de cumpleaños diseño",d:"Pack de 12 con diseños surtidos",v:[["Pack 12 u",9840]]},
+  {id:"globos",cat:"fiesta",n:"Globos N°9",d:"10 bolsas de 50 unidades",v:[["Pack 10 bolsas",15000]]},
+  {id:"bombitas",cat:"fiesta",n:"Bombitas de agua",d:"10 bolsas de 100 unidades",v:[["Pack 10 bolsas",8000]]},
+
+  // Aseo y otros
+  {id:"escobillon",cat:"otros",n:"Escobillón",d:"Con palo de madera forrado · pack de 10",v:[["Pack 10 u",13500]]},
+  {id:"pala-basura",cat:"otros",n:"Pala de basura",d:"Plástica negra · pack de 10",v:[["Pack 10 u",9800]]},
+  {id:"vela-gigante",cat:"otros",n:"Vela gigante Luz Clarita",d:"22 cm · 78 g · 7 hrs aprox · caja de 30 paquetes de 4",v:[["Caja 30 paquetes",46410]]},
+  {id:"vela-mediana",cat:"otros",n:"Vela mediana Luz Clarita",d:"17 cm · 41 g · 6 hrs aprox · caja de 40 paquetes de 4",v:[["Caja 40 paquetes",39270]]},
+  {id:"ronson-clearlite",cat:"otros",n:"Encendedor Ronson Clearlite",d:"Pack de 20 unidades",v:[["Pack 20 u",3808]]},
+  {id:"ronson-colourlite",cat:"otros",n:"Encendedor Ronson Colourlite",d:"Pack de 20 unidades",v:[["Pack 20 u",4522]]},
+  {id:"ronson-electrolite",cat:"otros",n:"Encendedor Ronson Electrolite",d:"Pack de 12 unidades",v:[["Pack 12 u",5177]]}
+];
+
+const $ = s => document.querySelector(s);
+const clp = n => "$" + n.toLocaleString("es-CL");
+const waUrl = text => "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(text);
+const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+document.querySelectorAll(".wa-link").forEach(a => a.href = waUrl("Hola Mi Rincón Deco, quiero cotizar productos desechables para mi negocio."));
+$("#year").textContent = new Date().getFullYear();
+$("#statProducts").textContent = "+" + Math.floor(P.length / 10) * 10;
+
+// Destacados: bolsas de basura
+$("#featured").innerHTML = P.filter(p => p.cat === "basura").map(p => {
+  const [size, mic] = p.d.split(" · ");
+  return `<a class="fcard" href="#p-${p.id}" style="text-decoration:none">
+    <div class="ph"><img src="img/${p.id}.jpg" alt="${esc(p.n)}" loading="lazy"></div>
+    <h3>${esc(p.n.replace("Bolsa basura ", "").replace(/^./, c => c.toUpperCase()))}</h3>
+    <div class="specs">${size} · ${mic}</div>
+    <div class="from">${esc(p.v[0][0])}<b>${clp(p.v[0][1])}</b></div>
+  </a>`;
+}).join("");
+
+// Filtros
+let cat = "todos";
+$("#chips").innerHTML = [["todos", "Todos"], ...Object.entries(CATS)]
+  .map(([k, v]) => `<button class="chip${k === cat ? " on" : ""}" data-c="${k}">${v}</button>`).join("");
+$("#chips").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  cat = b.dataset.c;
+  document.querySelectorAll(".chip").forEach(c => c.classList.toggle("on", c === b));
+  filter();
+});
+
+// Grilla
+$("#grid").innerHTML = P.map(p => `
+  <article class="card" id="p-${p.id}" data-cat="${p.cat}" data-q="${esc((p.n + " " + p.d + " " + CATS[p.cat] + " " + p.v.map(v => v[0]).join(" ")).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""))}">
+    <div class="ph"><img src="img/${p.id}.jpg" alt="${esc(p.n)}" loading="lazy"></div>
+    <div class="body">
+      <span class="tag">${CATS[p.cat]}</span>
+      <h3>${esc(p.n)}</h3>
+      <p class="desc">${esc(p.d)}</p>
+      ${p.v.length > 1
+        ? `<select aria-label="Presentación">${p.v.map((v, i) => `<option value="${i}">${esc(v[0])} — ${clp(v[1])}</option>`).join("")}</select>`
+        : `<div class="desc" style="display:block">${esc(p.v[0][0])}</div>`}
+      <div class="price">${clp(p.v[0][1])}</div>
+      <div class="buy">
+        <div class="qty"><button type="button" data-d="-1" aria-label="Menos">−</button><input type="number" min="1" value="1" aria-label="Cantidad"><button type="button" data-d="1" aria-label="Más">+</button></div>
+        <button class="add" type="button">Agregar</button>
+      </div>
+    </div>
+  </article>`).join("");
+
+$("#grid").addEventListener("change", e => {
+  if (e.target.tagName !== "SELECT") return;
+  const card = e.target.closest(".card"), p = P.find(x => "p-" + x.id === card.id);
+  card.querySelector(".price").textContent = clp(p.v[e.target.value][1]);
+});
+$("#grid").addEventListener("click", e => {
+  const card = e.target.closest(".card"); if (!card) return;
+  const input = card.querySelector(".qty input");
+  if (e.target.dataset.d) input.value = Math.max(1, (+input.value || 1) + +e.target.dataset.d);
+  if (e.target.classList.contains("add")) {
+    const p = P.find(x => "p-" + x.id === card.id);
+    const sel = card.querySelector("select"), vi = sel ? +sel.value : 0;
+    addToCart(p.id, vi, Math.max(1, +input.value || 1));
+    const b = e.target; b.textContent = "✓ Agregado"; b.classList.add("ok");
+    setTimeout(() => { b.textContent = "Agregar"; b.classList.remove("ok"); }, 1200);
+  }
+});
+
+const norm = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+function filter() {
+  const words = norm($("#q").value.trim()).split(/\s+/).filter(Boolean);
+  let shown = 0;
+  document.querySelectorAll(".card").forEach(c => {
+    const ok = (cat === "todos" || c.dataset.cat === cat) && words.every(w => c.dataset.q.includes(w));
+    c.style.display = ok ? "" : "none"; if (ok) shown++;
+  });
+  $("#empty").style.display = shown ? "none" : "block";
+}
+$("#q").addEventListener("input", filter);
+
+// Carrito
+let cart = [];
+try { cart = JSON.parse(localStorage.getItem("mrd-cart")) || []; } catch (e) {}
+const save = () => { try { localStorage.setItem("mrd-cart", JSON.stringify(cart)); } catch (e) {} };
+
+function addToCart(id, vi, qty) {
+  const line = cart.find(l => l.id === id && l.vi === vi);
+  if (line) line.qty += qty; else cart.push({id, vi, qty});
+  save(); renderCart();
+}
+function renderCart() {
+  let total = 0, count = 0;
+  const lines = cart.map((l, i) => {
+    const p = P.find(x => x.id === l.id); if (!p) return "";
+    const [label, price] = p.v[l.vi]; const sub = price * l.qty;
+    total += sub; count += l.qty;
+    return `<div class="item"><img src="img/${p.id}.jpg" alt="">
+      <div><h4>${esc(p.n)}</h4><small>${esc(label)} · ${l.qty} x ${clp(price)}</small>
+      <button class="rm" data-i="${i}">Quitar</button></div>
+      <div class="r"><b>${clp(sub)}</b></div></div>`;
+  }).join("");
+  $("#items").innerHTML = lines || `<p class="cart-empty">Tu pedido está vacío.<br>Agrega productos desde el catálogo.</p>`;
+  $("#total").textContent = clp(total);
+  $("#cartCount").textContent = count;
+  const msg = "Hola Mi Rincón Deco, quiero hacer este pedido:\n\n" +
+    cart.map(l => { const p = P.find(x => x.id === l.id); const [lb, pr] = p.v[l.vi];
+      return `• ${l.qty} x ${p.n} (${lb}) — ${clp(pr * l.qty)}`; }).join("\n") +
+    `\n\nTotal estimado: ${clp(total)}\n\nNombre del negocio:\nComuna:\nDirección:\n\nQuedo atento(a) a la confirmación de stock y despacho.`;
+  $("#sendWa").href = cart.length ? waUrl(msg) : "#";
+}
+$("#items").addEventListener("click", e => {
+  if (e.target.classList.contains("rm")) { cart.splice(+e.target.dataset.i, 1); save(); renderCart(); }
+});
+$("#sendWa").addEventListener("click", e => { if (!cart.length) e.preventDefault(); });
+const toggle = o => document.body.classList.toggle("open", o);
+$("#openCart").onclick = () => toggle(true);
+$("#closeCart").onclick = $("#overlay").onclick = () => toggle(false);
+document.addEventListener("keydown", e => { if (e.key === "Escape") toggle(false); });
+
+// Cobertura: mapa interactivo por región
+const REG = {
+  rm: {name: "Región Metropolitana", provs: {
+    "Santiago": {color: "#0b6bcb", cap: "Santiago", note: "capital regional"},
+    "Cordillera": {color: "#7a5af5", cap: "Puente Alto"},
+    "Chacabuco": {color: "#0f9d8a", cap: "Colina"},
+    "Maipo": {color: "#e08a16", cap: "San Bernardo"},
+    "Talagante": {color: "#d6487e", cap: "Talagante"},
+    "Melipilla": {color: "#4f8a2b", cap: "Melipilla"}
+  }},
+  vi: {name: "VI Región de O'Higgins", provs: {
+    "Cachapoal": {color: "#0b6bcb", cap: "Rancagua", note: "capital regional"},
+    "Colchagua": {color: "#e08a16", cap: "San Fernando"},
+    "Cardenal Caro": {color: "#0f9d8a", cap: "Pichilemu"}
+  }}
+};
+const ALIAS = {"Pedro Aguirre Cerda": "pac", "Tiltil": "til til", "Mostazal": "san francisco de mostazal", "San Vicente de Tagua Tagua": "san vicente"};
+const MAP = window.MAPA_COMUNAS;
+const ALL = [];
+Object.entries(MAP).forEach(([rk, r]) => r.c.forEach(c => ALL.push({...c, rk, k: norm(c.n + " " + (ALIAS[c.n] || ""))})));
+let region = "rm", selected = null, zoomed = false;
+const svg = $("#map"), tip = $("#tip");
+
+function drawRegion() {
+  const r = MAP[region], cfg = REG[region];
+  svg.setAttribute("viewBox", `0 0 ${r.w} ${r.h}`);
+  svg.innerHTML = r.c.map(c => `<path d="${c.d}" fill="${cfg.provs[c.p].color}" data-n="${esc(c.n)}" tabindex="-1"><title>${esc(c.n)}</title></path>`).join("");
+  $("#legend").innerHTML = Object.entries(cfg.provs).map(([p, v]) => `<span><i style="background:${v.color}"></i>${p}</span>`).join("");
+  $("#provlist").innerHTML = Object.entries(cfg.provs).map(([p, v], i) => {
+    const cs = r.c.filter(c => c.p === p).sort((a, b) => a.n === v.cap ? -1 : b.n === v.cap ? 1 : a.n.localeCompare(b.n, "es"));
+    return `<div class="prov${i === 0 ? " open" : ""}" data-p="${esc(p)}">
+      <button class="prov-btn" type="button" aria-expanded="${i === 0}"><i style="background:${v.color}"></i>Provincia de ${p}<span>${cs.length} comunas</span></button>
+      <ul>${cs.map(c => `<li><button class="cchip" type="button" data-n="${esc(c.n)}">${esc(c.n)}${c.n === v.cap ? ` <small>(${v.note || "capital provincial"})</small>` : ""}</button></li>`).join("")}</ul>
+    </div>`;
+  }).join("");
+  document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", t.dataset.reg === region));
+  $("#zoomIn").hidden = region !== "rm" || zoomed; $("#zoomOut").hidden = !zoomed;
+}
+function setZoom(on) {
+  zoomed = on && region === "rm";
+  const r = MAP[region];
+  if (zoomed) {
+    let x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9;
+    svg.querySelectorAll("path").forEach(p => {
+      if (r.c.find(c => c.n === p.dataset.n).p !== "Santiago") return;
+      const b = p.getBBox(); x0 = Math.min(x0, b.x); y0 = Math.min(y0, b.y); x1 = Math.max(x1, b.x + b.width); y1 = Math.max(y1, b.y + b.height);
+    });
+    const pad = 8, w = x1 - x0 + pad * 2, h = y1 - y0 + pad * 2, ratio = r.w / r.h;
+    const W = Math.max(w, h * ratio), H = W / ratio;
+    svg.setAttribute("viewBox", `${x0 - pad - (W - w) / 2} ${y0 - pad - (H - h) / 2} ${W} ${H}`);
+  } else svg.setAttribute("viewBox", `0 0 ${r.w} ${r.h}`);
+  $("#zoomIn").hidden = region !== "rm" || zoomed; $("#zoomOut").hidden = !zoomed;
+}
+function setRegion(rk) {
+  if (rk === region) return;
+  region = rk; zoomed = false; drawRegion(); paintHits();
+}
+function select(name) {
+  const c = ALL.find(x => x.n === name); if (!c) return;
+  if (c.rk !== region) setRegion(c.rk);
+  selected = c;
+  svg.querySelectorAll("path").forEach(p => p.classList.toggle("sel", p.dataset.n === name));
+  const sp = svg.querySelector(`path.sel`); if (sp) svg.appendChild(sp);
+  document.querySelectorAll(".cchip").forEach(b => b.classList.toggle("sel", b.dataset.n === name));
+  const box = document.querySelector(`.prov[data-p="${CSS.escape(c.p)}"]`);
+  if (box && !box.classList.contains("open")) toggleProv(box, true);
+  if (region === "rm" && c.p === "Santiago" && !zoomed) setZoom(true);
+  const pick = $("#pick"); pick.className = "pick ok";
+  pick.innerHTML = `<h4>✓ Despacho gratis a ${esc(c.n)}</h4>
+    <p>Provincia de ${esc(c.p)} · ${REG[c.rk].name}. Zonas urbanas y rurales. Pagas al recibir.</p>
+    <a class="btn btn-wa" target="_blank" rel="noopener" href="${waUrl(`Hola Mi Rincón Deco, tengo un negocio en ${c.n} y quiero cotizar productos desechables.`)}">Cotizar para ${esc(c.n)}</a>`;
+}
+function toggleProv(box, open) {
+  box.classList.toggle("open", open);
+  box.querySelector(".prov-btn").setAttribute("aria-expanded", open);
+}
+function paintHits() {
+  const q = norm($("#qc").value.trim());
+  const hits = q ? ALL.filter(c => c.k.includes(q)) : [];
+  if (hits.length && !hits.some(h => h.rk === region)) { region = hits[0].rk; zoomed = false; drawRegion(); }
+  const names = new Set(hits.map(h => h.n));
+  svg.classList.toggle("focus", !!q && hits.length > 0);
+  svg.querySelectorAll("path").forEach(p => { p.classList.toggle("on", names.has(p.dataset.n)); p.classList.toggle("hit", names.has(p.dataset.n)); });
+  document.querySelectorAll(".cchip").forEach(b => b.classList.toggle("hit", names.has(b.dataset.n)));
+  if (q) document.querySelectorAll(".prov").forEach(box => toggleProv(box, [...box.querySelectorAll(".cchip")].some(b => names.has(b.dataset.n))));
+  if (hits.length === 1) select(hits[0].n);
+  else if (q && !hits.length) {
+    $("#pick").className = "pick no";
+    $("#pick").innerHTML = `<h4>No encontramos esa comuna</h4><p>Por ahora despachamos en la Región Metropolitana y la VI Región. Escríbenos y te confirmamos si podemos llegar.</p>
+      <a class="btn btn-wa" target="_blank" rel="noopener" href="${waUrl("Hola Mi Rincón Deco, ¿hacen despacho a mi comuna?")}">Consultar por WhatsApp</a>`;
+  } else if (q && hits.length > 1) {
+    $("#pick").className = "pick";
+    $("#pick").innerHTML = `<h4>${hits.length} comunas coinciden</h4><p>Elige la tuya en el mapa o en la lista.</p>`;
+  }
+}
+
+document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () => setRegion(t.dataset.reg)));
+$("#zoomIn").onclick = () => setZoom(true);
+$("#zoomOut").onclick = () => setZoom(false);
+svg.addEventListener("click", e => { const p = e.target.closest("path"); if (p) select(p.dataset.n); });
+svg.addEventListener("mousemove", e => {
+  const p = e.target.closest("path");
+  if (!p) { tip.style.opacity = 0; return; }
+  const c = ALL.find(x => x.n === p.dataset.n), r = $(".map-box").getBoundingClientRect();
+  tip.innerHTML = `${esc(c.n)}<small>Provincia de ${esc(c.p)}</small>`;
+  tip.style.left = (e.clientX - r.left) + "px"; tip.style.top = (e.clientY - r.top) + "px"; tip.style.opacity = 1;
+});
+svg.addEventListener("mouseleave", () => tip.style.opacity = 0);
+$("#provlist").addEventListener("click", e => {
+  const chip = e.target.closest(".cchip"); if (chip) return select(chip.dataset.n);
+  const btn = e.target.closest(".prov-btn"); if (btn) { const box = btn.parentElement; toggleProv(box, !box.classList.contains("open")); }
+});
+$("#qc").addEventListener("input", paintHits);
+document.querySelectorAll(".region a[data-reg]").forEach(a => a.addEventListener("click", () => setRegion(a.dataset.reg)));
+drawRegion();
+
+renderCart();
+</script>
+</body>
+</html>
