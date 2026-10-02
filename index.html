@@ -142,6 +142,21 @@ section.block{padding:72px 0 24px}
 .clients h4{margin:0 0 10px;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--brand)}
 .cl{display:flex;flex-wrap:wrap;gap:8px}
 .cl span{background:#fff;border-radius:999px;padding:6px 12px;font-size:.86rem;font-weight:600}
+.comunas{margin-top:28px;background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}
+.com-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.com-head h3{margin:0;font-size:1.25rem;letter-spacing:-.01em}
+.com-head p{margin:2px 0 0;color:var(--muted);font-size:.9rem}
+.com-search{flex:0 1 300px;min-width:220px}
+.com-msg{margin:12px 0 0;font-weight:600;font-size:.92rem;min-height:1.4em}
+.com-msg.ok{color:var(--price)}
+.com-msg.no{color:var(--muted)}
+.provs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+.prov h4{margin:0 0 10px;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--brand)}
+.prov ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.prov li{background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:5px 11px;font-size:.85rem}
+.prov li small{color:var(--muted)}
+.prov li.hit{background:#dcf5e7;border-color:#9fdcb9;font-weight:700}
+.prov li.dim{opacity:.35}
 footer a{color:var(--brand);font-weight:600;text-decoration:none}
 footer{margin-top:72px;border-top:1px solid var(--line);background:#fff}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:28px;padding-bottom:28px;font-size:.88rem;color:var(--muted)}
@@ -179,6 +194,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
   .featured .fcard:last-child{grid-column:span 2}
   .steps{grid-template-columns:1fr}
   .cov{grid-template-columns:1fr}
+  .provs{grid-template-columns:1fr}
   .nav{display:none}
   .cart-btn{margin-left:auto}
 }
@@ -280,13 +296,27 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
         </div>
         <div class="region">
           <div class="pin">📍</div>
-          <div><h3>VI Región de O'Higgins</h3><p>Rancagua y comunas de la región, urbanas y rurales.</p></div>
+          <div><h3>VI Región de O'Higgins</h3><p>33 comunas de las provincias de Cachapoal, Colchagua y Cardenal Caro. <a href="#comunas">Ver comunas</a></p></div>
         </div>
         <div class="clients">
           <h4>Trabajamos con</h4>
           <div class="cl"><span>🏪 Minimarkets</span><span>🛒 Supermercados</span><span>🥖 Almacenes y negocios locales</span></div>
         </div>
       </div>
+    </div>
+    <div class="comunas" id="comunas">
+      <div class="com-head">
+        <div>
+          <h3>Comunas con despacho gratis en la VI Región</h3>
+          <p>Zonas urbanas y rurales de cada comuna.</p>
+        </div>
+        <label class="search com-search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input id="qc" type="search" placeholder="Busca tu comuna…" aria-label="Buscar comuna">
+        </label>
+      </div>
+      <p class="com-msg" id="comMsg"></p>
+      <div class="provs" id="provs"></div>
     </div>
   </div>
 </section>
@@ -591,6 +621,27 @@ const toggle = o => document.body.classList.toggle("open", o);
 $("#openCart").onclick = () => toggle(true);
 $("#closeCart").onclick = $("#overlay").onclick = () => toggle(false);
 document.addEventListener("keydown", e => { if (e.key === "Escape") toggle(false); });
+
+// Comunas VI Región
+const PROVS = {
+  "Provincia de Cachapoal": ["Rancagua|capital regional","Codegua","Coinco","Coltauco","Doñihue","Graneros","Las Cabras","Machalí","Malloa","Mostazal","Olivar","Peumo","Pichidegua","Quinta de Tilcoco","Rengo","Requínoa","San Vicente de Tagua Tagua"],
+  "Provincia de Colchagua": ["San Fernando|capital provincial","Chépica","Chimbarongo","Lolol","Nancagua","Palmilla","Paredones","Peralillo","Placilla","Pumanque","Santa Cruz"],
+  "Provincia de Cardenal Caro": ["Pichilemu|capital provincial","La Estrella","Litueche","Marchigüe","Navidad"]
+};
+$("#provs").innerHTML = Object.entries(PROVS).map(([prov, cs]) => `<div class="prov"><h4>${prov}</h4><ul>${
+  cs.map(c => { const [n, t] = c.split("|"); const k = n === "Mostazal" ? n + " san francisco de mostazal" : n;
+    return `<li data-k="${norm(k)}">${n}${t ? ` <small>(${t})</small>` : ""}</li>`; }).join("")}</ul></div>`).join("");
+$("#qc").addEventListener("input", () => {
+  const q = norm($("#qc").value.trim()), msg = $("#comMsg");
+  let hits = 0;
+  document.querySelectorAll(".prov li").forEach(li => {
+    const ok = !q || li.dataset.k.includes(q); if (q && ok) hits++;
+    li.classList.toggle("hit", !!q && ok); li.classList.toggle("dim", !!q && !ok);
+  });
+  msg.className = "com-msg " + (q ? (hits ? "ok" : "no") : "");
+  msg.textContent = !q ? "" : hits ? "✓ ¡Sí despachamos a tu comuna! Despacho gratis y pagas al recibir."
+    : "No encontramos esa comuna en la VI Región. Escríbenos por WhatsApp y te confirmamos si llegamos.";
+});
 
 renderCart();
 </script>
