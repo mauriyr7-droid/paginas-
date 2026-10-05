@@ -37,6 +37,35 @@ header.top{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);bac
 .cart-btn:hover{background:var(--brand-dark)}
 .cart-count{background:#fff;color:var(--brand);border-radius:999px;min-width:22px;height:22px;display:grid;place-items:center;font-size:.78rem;padding:0 6px}
 
+/* Barra de anuncios: IVA incluido + despacho gratis */
+.promo{background:#0d5f3a;color:#fff;font-size:.88rem;font-weight:700}
+.promo .wrap{display:flex;justify-content:center;align-items:center;gap:10px 28px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px;text-align:center}
+.promo span{display:inline-flex;align-items:center;gap:8px}
+.promo b{background:#ffd23f;color:#3a2a00;border-radius:6px;padding:1px 8px;font-weight:800;letter-spacing:.02em}
+
+/* Sellos destacados */
+.seals{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 26px}
+.seal{display:flex;align-items:center;gap:12px;border-radius:14px;padding:10px 16px 10px 10px;font-weight:700;line-height:1.2;box-shadow:0 8px 20px rgba(0,0,0,.18)}
+.seal .ico{width:42px;height:42px;border-radius:10px;display:grid;place-items:center;font-size:1.35rem;flex:none}
+.seal small{display:block;font-weight:500;font-size:.78rem;opacity:.85}
+.seal big{display:block;font-size:1.12rem;font-weight:800;letter-spacing:-.01em}
+.seal.ship{background:#ffd23f;color:#2b2000}
+.seal.ship .ico{background:#2b2000;color:#ffd23f}
+.seal.iva{background:#fff;color:#0d5f3a}
+.seal.iva .ico{background:#0d5f3a;color:#fff;font-size:.95rem;font-weight:800}
+
+.price-strip{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 18px}
+.price-strip div{display:flex;align-items:center;gap:12px;border-radius:14px;padding:14px 18px;font-weight:700}
+.price-strip .ic{font-size:1.5rem;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;flex:none}
+.price-strip big{display:block;font-size:1.1rem;font-weight:800}
+.price-strip small{display:block;font-weight:500;font-size:.85rem;opacity:.85}
+.price-strip .s-iva{background:#e6f4ec;color:#0d5f3a;border:2px solid #9bd3b4}
+.price-strip .s-iva .ic{background:#0d5f3a;color:#fff;font-size:.95rem;font-weight:800}
+.price-strip .s-ship{background:#fff6cf;color:#4a3800;border:2px solid #f0cf55}
+.price-strip .s-ship .ic{background:#ffd23f}
+.iva-tag{display:inline-block;margin-left:6px;font-size:.7rem;font-weight:800;color:#0d5f3a;background:#e6f4ec;border-radius:6px;padding:2px 6px;vertical-align:middle;letter-spacing:.02em}
+.ship-tag{display:inline-flex;align-items:center;gap:5px;font-size:.76rem;font-weight:800;color:#4a3800;background:#fff1b0;border-radius:6px;padding:3px 8px;align-self:flex-start}
+
 /* Hero */
 .hero{background:linear-gradient(135deg,#0b6bcb 0%,#0a4f95 60%,#083a6e 100%);color:#fff;overflow:hidden;position:relative}
 .hero::after{content:"";position:absolute;inset:auto -120px -160px auto;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.14),transparent 70%)}
@@ -113,6 +142,7 @@ section.block{padding:72px 0 24px}
 .add{flex:1;border:0;background:var(--brand);color:#fff;font-weight:700;border-radius:10px;height:40px}
 .add:hover{background:var(--brand-dark)}
 .add.ok{background:var(--price)}
+.price-row{display:flex;align-items:baseline;flex-wrap:wrap;gap:2px}
 .empty{text-align:center;color:var(--muted);padding:40px 0;display:none}
 
 /* Steps */
@@ -190,6 +220,45 @@ section.block{padding:72px 0 24px}
 .cchip.sel{background:var(--ink);border-color:var(--ink);color:#fff}
 .cchip.sel small{color:#cfd6e0}
 @media (prefers-reduced-motion:reduce){.map-box path,.prov-btn::after,.map-tip{transition:none}}
+/* Registro de clientes */
+.reg{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.2fr);background:var(--surface);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--line)}
+.reg-side{background:linear-gradient(160deg,#0b6bcb,#083a6e);color:#fff;padding:32px}
+.reg-side h2{margin:6px 0 10px;font-size:clamp(1.5rem,3vw,2rem);letter-spacing:-.02em;line-height:1.15}
+.reg-side p{margin:0 0 18px;opacity:.9}
+.reg-side ul{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:10px}
+.reg-side li{display:flex;gap:10px;align-items:flex-start}
+.reg-side li::before{content:"✓";flex:none;width:22px;height:22px;border-radius:50%;background:#ffd23f;color:#2b2000;font-weight:800;font-size:.8rem;display:grid;place-items:center;margin-top:1px}
+.reg-side .time{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border-radius:999px;padding:6px 12px;font-size:.85rem;font-weight:600}
+.reg-form{padding:32px}
+.reg-form h3{margin:0 0 18px;font-size:1.2rem}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f{display:flex;flex-direction:column;gap:6px;min-width:0}
+.f.full{grid-column:1/-1}
+.f label{font-size:.85rem;font-weight:700}
+.f label i{font-style:normal;color:#c0392b}
+.f label span{font-weight:500;color:var(--muted)}
+.f input,.f select{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff;color:var(--ink);outline:none}
+.f input:focus,.f select:focus{border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft)}
+.f.bad input,.f.bad select{border-color:#c0392b;background:#fff7f6}
+.f .err{display:none;font-size:.78rem;color:#c0392b;font-weight:600}
+.f.bad .err{display:block}
+.phone{display:flex;align-items:stretch;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
+.phone span{display:flex;align-items:center;gap:6px;padding:0 10px 0 12px;background:var(--bg);font-weight:700;font-size:.92rem;border-right:1px solid var(--line);white-space:nowrap}
+.phone input{border:0;border-radius:0;box-shadow:none!important}
+.phone:focus-within{border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft)}
+.f.bad .phone{border-color:#c0392b}
+.f label.consent{display:flex;gap:10px;align-items:flex-start;font-size:.84rem;font-weight:500;color:var(--muted);margin-top:4px}
+.consent input{margin-top:3px;width:18px;height:18px;flex:none}
+.reg-actions{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:18px}
+.reg-actions small{color:var(--muted)}
+.btn-reg{border:0;background:var(--accent);color:#fff;font-weight:800;padding:14px 26px;border-radius:12px;font-size:1rem}
+.btn-reg:hover{filter:brightness(.95)}
+.btn-reg[disabled]{opacity:.6;cursor:wait}
+.reg-ok{text-align:center;padding:24px 8px}
+.reg-ok .big{width:64px;height:64px;border-radius:50%;background:#dcf5e7;color:var(--price);font-size:2rem;display:grid;place-items:center;margin:0 auto 14px;font-weight:800}
+.reg-ok h3{margin:0 0 6px}
+.reg-ok p{color:var(--muted);margin:0 0 18px}
+.reg-foot{text-align:center;color:var(--muted);font-size:.88rem;margin-top:14px}
 footer a{color:var(--brand);font-weight:600;text-decoration:none}
 footer{margin-top:72px;border-top:1px solid var(--line);background:#fff}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:28px;padding-bottom:28px;font-size:.88rem;color:var(--muted)}
@@ -211,6 +280,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 .item .r b{display:block;color:var(--price)}
 .item .rm{border:0;background:none;color:#c0392b;font-size:.78rem;padding:0}
 .drawer footer{margin:0;padding:16px 20px;border-top:1px solid var(--line);background:#fff}
+.drawer footer .tot-ship{display:flex;justify-content:space-between;align-items:center;background:#fff6cf;border:1px solid #f0cf55;color:#4a3800;border-radius:10px;padding:8px 12px;margin-bottom:10px;font-weight:700}
+.drawer footer .tot-ship b{background:#ffd23f;border-radius:6px;padding:1px 8px}
 .drawer footer .tot{display:flex;justify-content:space-between;font-weight:800;font-size:1.15rem;margin-bottom:12px}
 .drawer footer .tot span:last-child{color:var(--price)}
 .drawer footer .btn{width:100%;justify-content:center}
@@ -226,6 +297,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
   .featured{grid-template-columns:repeat(2,1fr)}
   .featured .fcard:last-child{grid-column:span 2}
   .steps{grid-template-columns:1fr}
+  .reg{grid-template-columns:1fr}
   .cov{grid-template-columns:1fr}
   .cov-body{grid-template-columns:1fr}
   .provlist{max-height:none}
@@ -233,6 +305,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
   .cart-btn{margin-left:auto}
 }
 @media (max-width:520px){
+  .fgrid{grid-template-columns:1fr}
+  .reg-side,.reg-form{padding:22px}
+  .price-strip{grid-template-columns:1fr}
+  .seal{flex:1 1 100%}
+  .promo{font-size:.8rem}
   .benefits .grid{grid-template-columns:1fr}
   .brand small{display:none}
   .cart-btn .lbl{display:none}
@@ -249,6 +326,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 </head>
 <body>
 
+<div class="promo" role="note">
+  <div class="wrap">
+    <span>🚚 Despacho <b>GRATIS</b> a tu negocio</span>
+    <span>💲 Todos los precios <b>con IVA incluido</b></span>
+    <span>💵 Pagas al recibir</span>
+  </div>
+</div>
+
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#">
@@ -259,7 +344,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
       <a href="#cobertura">Cobertura</a>
       <a href="#basura">Bolsas de basura</a>
       <a href="#catalogo">Catálogo</a>
-      <a href="#como-comprar">Cómo comprar</a>
+      <a href="#registro">Registra tu negocio</a>
     </nav>
     <button class="cart-btn" id="openCart" aria-label="Ver cotización">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
@@ -275,6 +360,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
       <span class="eyebrow">🚚 Despacho gratis · Región Metropolitana y VI Región</span>
       <h1>Bolsas y desechables <span>para tu minimarket</span>, directo a tu local</h1>
       <p class="lead">Abastecemos a minimarkets, supermercados y negocios locales con bolsas de basura, bolsas camiseta, vasos, platos, cubiertos y mucho más. Te lo llevamos <strong>gratis</strong> a tu negocio, en zonas urbanas y rurales, y <strong>pagas al recibir</strong>.</p>
+      <div class="seals">
+        <div class="seal ship"><span class="ico">🚚</span><span><small>A todo tu negocio</small><big>Despacho GRATIS</big></span></div>
+        <div class="seal iva"><span class="ico">IVA</span><span><small>En todos los precios</small><big>IVA incluido</big></span></div>
+      </div>
       <div class="cta-row">
         <a class="btn btn-light" href="#catalogo">Ver catálogo y precios</a>
         <a class="btn btn-wa wa-link" href="#" target="_blank" rel="noopener">
@@ -395,6 +484,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
         <p>Elige la presentación, la cantidad y agrégalo a tu pedido.</p>
       </div>
     </div>
+    <div class="price-strip">
+      <div class="s-iva"><span class="ic">IVA</span><span><big>Precios con IVA incluido</big><small>El precio que ves es el precio final. Sin sorpresas.</small></span></div>
+      <div class="s-ship"><span class="ic">🚚</span><span><big>Despacho GRATIS</big><small>A tu negocio en 85 comunas de la RM y la VI Región.</small></span></div>
+    </div>
     <div class="controls">
       <label class="search">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
@@ -409,10 +502,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 
 <section class="block" id="como-comprar">
   <div class="wrap">
-    <div class="sec-head"><div><h2>¿Cómo comprar?</h2><p>Simple y rápido, sin registrarte y sin pagar por adelantado.</p></div></div>
+    <div class="sec-head"><div><h2>¿Cómo comprar?</h2><p>Simple y rápido, sin pagar por adelantado.</p></div></div>
     <div class="steps">
       <div class="step"><div class="n">1</div><h3>Arma tu pedido</h3><p>Elige productos, presentación (pack o caja) y cantidad desde el catálogo.</p></div>
-      <div class="step"><div class="n">2</div><h3>Envíalo por WhatsApp</h3><p>Con un clic se genera el mensaje con el detalle y el total estimado.</p></div>
+      <div class="step"><div class="n">2</div><h3>Envíalo por WhatsApp</h3><p>Con un clic se genera el mensaje con el detalle y el total con IVA incluido.</p></div>
       <div class="step"><div class="n">3</div><h3>Recibe y paga</h3><p>Confirmamos stock y te lo llevamos gratis a tu negocio. Pagas al recibir el producto.</p></div>
     </div>
     <div class="band">
@@ -425,11 +518,92 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
   </div>
 </section>
 
+<section class="block" id="registro">
+  <div class="wrap">
+    <div class="reg">
+      <div class="reg-side">
+        <span class="eyebrow">Registro de clientes</span>
+        <h2>Registra tu negocio y compra más fácil</h2>
+        <p>Déjanos tus datos una vez y te atendemos más rápido en cada pedido.</p>
+        <ul>
+          <li>Despacho gratis a tu negocio, en zonas urbanas y rurales.</li>
+          <li>Precios mayoristas con IVA incluido.</li>
+          <li>Avisos de ofertas y recordatorio cuando te toque reponer.</li>
+          <li>Pagas al recibir, sin pagos por adelantado.</li>
+        </ul>
+        <span class="time">⏱ Toma menos de 1 minuto</span>
+      </div>
+      <div class="reg-form">
+        <form id="regForm" novalidate>
+          <h3>Ingresa los datos de tu negocio</h3>
+          <div class="fgrid">
+            <div class="f full" data-f="nombre">
+              <label for="r-nombre">Nombre completo <i>*</i></label>
+              <input id="r-nombre" name="nombre" autocomplete="name" placeholder="Ej: María González">
+              <span class="err">Ingresa tu nombre.</span>
+            </div>
+            <div class="f" data-f="whatsapp">
+              <label for="r-whatsapp">WhatsApp <i>*</i></label>
+              <div class="phone"><span>🇨🇱 +56 9</span><input id="r-whatsapp" name="whatsapp" inputmode="numeric" autocomplete="tel-local" placeholder="1234 5678" maxlength="9"></div>
+              <span class="err">Ingresa los 8 dígitos de tu celular.</span>
+            </div>
+            <div class="f" data-f="rut">
+              <label for="r-rut">RUT de la empresa <i>*</i></label>
+              <input id="r-rut" name="rut" placeholder="76.123.456-7" maxlength="12" autocomplete="off">
+              <span class="err">El RUT no es válido. Revisa el dígito verificador.</span>
+            </div>
+            <div class="f full" data-f="negocio">
+              <label for="r-negocio">Nombre del negocio <span>(opcional)</span></label>
+              <input id="r-negocio" name="negocio" autocomplete="organization" placeholder="Ej: Minimarket Don Pedro">
+            </div>
+            <div class="f" data-f="tipo">
+              <label for="r-tipo">Tipo de negocio <i>*</i></label>
+              <select id="r-tipo" name="tipo">
+                <option value="">Selecciona…</option>
+                <option>Minimarket</option>
+                <option>Supermercado</option>
+                <option>Almacén o negocio local</option>
+                <option>Carnicería</option>
+                <option>Panadería</option>
+                <option>Botillería</option>
+                <option>Restaurante o local de comida</option>
+                <option>Distribuidora de artículos de limpieza</option>
+                <option>Otro</option>
+              </select>
+              <span class="err">Selecciona el tipo de negocio.</span>
+            </div>
+            <div class="f" data-f="comuna">
+              <label for="r-comuna">Comuna <i>*</i></label>
+              <select id="r-comuna" name="comuna"></select>
+              <span class="err">Selecciona tu comuna.</span>
+            </div>
+            <div class="f full" data-f="consent">
+              <label class="consent"><input type="checkbox" id="r-consent" name="consent"> Acepto que Mi Rincón Deco use estos datos para contactarme por WhatsApp con cotizaciones y ofertas.</label>
+              <span class="err">Necesitamos tu autorización para contactarte.</span>
+            </div>
+          </div>
+          <div class="reg-actions">
+            <small><i style="color:#c0392b;font-style:normal">*</i> Campos obligatorios</small>
+            <button class="btn-reg" type="submit" id="regBtn">Registrar mi negocio</button>
+          </div>
+        </form>
+        <div class="reg-ok" id="regOk" hidden>
+          <div class="big">✓</div>
+          <h3>¡Listo, <span id="okName"></span>!</h3>
+          <p>Para terminar, envíanos tus datos por WhatsApp. Así guardamos tu registro y te contactamos desde nuestro número.</p>
+          <a class="btn btn-wa" id="regWa" href="#" target="_blank" rel="noopener">Enviar mis datos por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <p class="reg-foot">🔒 Registro gratuito y sin compromiso · Tus datos solo se usan para atenderte</p>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <span>© <span id="year"></span> Comercializadora Mi Rincón Deco</span>
     <span>WhatsApp <a href="https://wa.me/56988994814" target="_blank" rel="noopener">+56 9 8899 4814</a> · Región Metropolitana y VI Región</span>
-    <span>Precios en pesos chilenos, sujetos a cambio y disponibilidad de stock.</span>
+    <span>Precios en pesos chilenos <b>con IVA incluido</b>, sujetos a cambio y disponibilidad de stock. Despacho gratis.</span>
   </div>
 </footer>
 
@@ -442,9 +616,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
   <header><h2>Tu pedido</h2><button class="x" id="closeCart" aria-label="Cerrar">×</button></header>
   <div class="items" id="items"></div>
   <footer>
-    <div class="tot"><span>Total estimado</span><span id="total">$0</span></div>
+    <div class="tot-ship"><span>🚚 Despacho</span><b>GRATIS</b></div>
+    <div class="tot"><span>Total <small class="iva-tag">IVA incluido</small></span><span id="total">$0</span></div>
     <a class="btn btn-wa" id="sendWa" href="#" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>
-    <p class="note">🚚 Despacho gratis · 💵 Pagas al recibir<br>El pedido se confirma por WhatsApp según stock disponible.</p>
+    <p class="note">💵 Pagas al recibir<br>El pedido se confirma por WhatsApp según stock disponible.</p>
   </footer>
 </aside>
 
@@ -574,7 +749,7 @@ $("#featured").innerHTML = P.filter(p => p.cat === "basura").map(p => {
     <div class="ph"><img src="img/${p.id}.jpg" alt="${esc(p.n)}" loading="lazy"></div>
     <h3>${esc(p.n.replace("Bolsa basura ", "").replace(/^./, c => c.toUpperCase()))}</h3>
     <div class="specs">${size} · ${mic}</div>
-    <div class="from">${esc(p.v[0][0])}<b>${clp(p.v[0][1])}</b></div>
+    <div class="from">${esc(p.v[0][0])}<b>${clp(p.v[0][1])} <span class="iva-tag">IVA incl.</span></b></div>
   </a>`;
 }).join("");
 
@@ -600,7 +775,8 @@ $("#grid").innerHTML = P.map(p => `
       ${p.v.length > 1
         ? `<select aria-label="Presentación">${p.v.map((v, i) => `<option value="${i}">${esc(v[0])} — ${clp(v[1])}</option>`).join("")}</select>`
         : `<div class="desc" style="display:block">${esc(p.v[0][0])}</div>`}
-      <div class="price">${clp(p.v[0][1])}</div>
+      <div class="price-row"><div class="price">${clp(p.v[0][1])}</div><span class="iva-tag">IVA incluido</span></div>
+      <span class="ship-tag">🚚 Despacho gratis</span>
       <div class="buy">
         <div class="qty"><button type="button" data-d="-1" aria-label="Menos">−</button><input type="number" min="1" value="1" aria-label="Cantidad"><button type="button" data-d="1" aria-label="Más">+</button></div>
         <button class="add" type="button">Agregar</button>
@@ -665,7 +841,7 @@ function renderCart() {
   const msg = "Hola Mi Rincón Deco, quiero hacer este pedido:\n\n" +
     cart.map(l => { const p = P.find(x => x.id === l.id); const [lb, pr] = p.v[l.vi];
       return `• ${l.qty} x ${p.n} (${lb}) — ${clp(pr * l.qty)}`; }).join("\n") +
-    `\n\nTotal estimado: ${clp(total)}\n\nNombre del negocio:\nComuna:\nDirección:\n\nQuedo atento(a) a la confirmación de stock y despacho.`;
+    `\n\nTotal con IVA incluido: ${clp(total)}\nDespacho: GRATIS\n\nNombre del negocio:\nComuna:\nDirección:\n\nQuedo atento(a) a la confirmación de stock y despacho.`;
   $("#sendWa").href = cart.length ? waUrl(msg) : "#";
 }
 $("#items").addEventListener("click", e => {
@@ -792,6 +968,84 @@ $("#provlist").addEventListener("click", e => {
 $("#qc").addEventListener("input", paintHits);
 document.querySelectorAll(".region a[data-reg]").forEach(a => a.addEventListener("click", () => setRegion(a.dataset.reg)));
 drawRegion();
+
+// Registro de clientes
+// ⚙️ URL que recibe los registros (webhook "Inbound Webhook" de un workflow de GoHighLevel, o una app web de Google Apps Script).
+// Si queda vacío, los datos se envían solo por WhatsApp al número de la empresa.
+const REGISTRO_WEBHOOK = "";
+
+const rutClean = v => v.replace(/[^0-9kK]/g, "").toUpperCase();
+const rutFormat = v => {
+  const c = rutClean(v); if (c.length < 2) return c;
+  return c.slice(0, -1).replace(/\B(?=(\d{3})+(?!\d))/g, ".") + "-" + c.slice(-1);
+};
+const rutValid = v => {
+  const c = rutClean(v), body = c.slice(0, -1), dv = c.slice(-1);
+  if (!/^\d{7,8}$/.test(body)) return false;
+  let sum = 0, m = 2;
+  for (let i = body.length - 1; i >= 0; i--) { sum += +body[i] * m; m = m === 7 ? 2 : m + 1; }
+  const r = 11 - (sum % 11);
+  return dv === (r === 11 ? "0" : r === 10 ? "K" : String(r));
+};
+const REG_NAMES = {rm: "Región Metropolitana", vi: "VI Región de O'Higgins"};
+$("#r-comuna").innerHTML = `<option value="">Selecciona…</option>` + Object.entries(MAP).map(([rk, r]) =>
+  `<optgroup label="${REG_NAMES[rk]}">${r.c.map(c => c.n).sort((a, b) => a.localeCompare(b, "es"))
+    .map(n => `<option data-reg="${REG_NAMES[rk]}">${esc(n)}</option>`).join("")}</optgroup>`).join("") +
+  `<optgroup label="Fuera de cobertura"><option data-reg="Otra">Otra comuna</option></optgroup>`;
+
+const form = $("#regForm");
+const field = n => form.querySelector(`[data-f="${n}"]`);
+$("#r-rut").addEventListener("input", e => { e.target.value = rutFormat(e.target.value); });
+$("#r-whatsapp").addEventListener("input", e => {
+  const d = e.target.value.replace(/\D/g, "").slice(0, 8);
+  e.target.value = d.length > 4 ? d.slice(0, 4) + " " + d.slice(4) : d;
+});
+form.addEventListener("input", e => { const f = e.target.closest(".f"); if (f) f.classList.remove("bad"); });
+form.addEventListener("change", e => { const f = e.target.closest(".f"); if (f) f.classList.remove("bad"); });
+
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+  const v = id => $("#" + id).value.trim();
+  const phone = v("r-whatsapp").replace(/\D/g, "");
+  const checks = {
+    nombre: v("r-nombre").length >= 3,
+    whatsapp: phone.length === 8,
+    rut: rutValid(v("r-rut")),
+    tipo: !!v("r-tipo"),
+    comuna: !!v("r-comuna"),
+    consent: $("#r-consent").checked
+  };
+  let first = null;
+  Object.entries(checks).forEach(([k, ok]) => { field(k).classList.toggle("bad", !ok); if (!ok && !first) first = field(k); });
+  if (first) { first.querySelector("input,select").focus(); return; }
+
+  const opt = $("#r-comuna").selectedOptions[0];
+  const data = {
+    nombre: v("r-nombre"),
+    whatsapp: "+569" + phone,
+    rut: rutFormat(v("r-rut")),
+    negocio: v("r-negocio"),
+    tipo_negocio: v("r-tipo"),
+    comuna: v("r-comuna"),
+    region: opt.dataset.reg,
+    origen: "Landing Mi Rincón Deco",
+    fecha: new Date().toISOString()
+  };
+  const btn = $("#regBtn"); btn.disabled = true; btn.textContent = "Enviando…";
+  let sent = false;
+  if (REGISTRO_WEBHOOK) {
+    try { await fetch(REGISTRO_WEBHOOK, {method: "POST", mode: "no-cors", body: new URLSearchParams(data)}); sent = true; } catch (err) {}
+  }
+  const msg = "Hola Mi Rincón Deco, quiero registrar mi negocio:\n\n" +
+    `• Nombre: ${data.nombre}\n• WhatsApp: +56 9 ${phone.slice(0, 4)} ${phone.slice(4)}\n• RUT empresa: ${data.rut}\n` +
+    (data.negocio ? `• Negocio: ${data.negocio}\n` : "") +
+    `• Tipo de negocio: ${data.tipo_negocio}\n• Comuna: ${data.comuna}${data.region !== "Otra" ? " (" + data.region + ")" : ""}`;
+  $("#regWa").href = waUrl(msg);
+  $("#okName").textContent = data.nombre.split(" ")[0];
+  if (sent) $("#regOk p").textContent = "Recibimos tus datos. Te contactaremos por WhatsApp para confirmar tu registro. Si quieres, también puedes escribirnos ahora.";
+  form.hidden = true; $("#regOk").hidden = false;
+  btn.disabled = false; btn.textContent = "Registrar mi negocio";
+});
 
 renderCart();
 </script>
